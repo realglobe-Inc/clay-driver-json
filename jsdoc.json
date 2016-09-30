@@ -1,0 +1,101 @@
+{
+  "functions": [
+    {
+      "name": "create",
+      "access": "",
+      "virtual": false,
+      "description": "Create driver instance",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "*",
+          "description": "",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "JSONDriver",
+        "description": ""
+      }
+    }
+  ],
+  "classes": [
+    {
+      "name": "JSONDriver",
+      "description": "",
+      "extends": [
+        "Driver"
+      ],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "JSONDriver",
+        "description": "Abstract driver",
+        "parameters": [],
+        "examples": []
+      },
+      "functions": [
+        {
+          "name": "open",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        },
+        {
+          "name": "close",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        },
+        {
+          "name": "create",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        },
+        {
+          "name": "read",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        },
+        {
+          "name": "update",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        },
+        {
+          "name": "delete",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        },
+        {
+          "name": "cursor",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        }
+      ]
+    }
+  ]
+}
