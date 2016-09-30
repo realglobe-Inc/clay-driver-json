@@ -20,11 +20,20 @@ describe('json-driver', function () {
   }))
 
   it('Json driver', () => co(function * () {
-    let driver = new JsonDriver()
-    assert.ok(driver)
-    yield driver.open()
-    yield driver.create('/foo', { msg: 'This is foo' })
-    yield driver.close()
+    let driver01 = new JsonDriver(`${__dirname}/../tmp/testing-driver`)
+    assert.ok(driver01)
+    yield driver01.connect()
+    yield driver01.create('/foo', { msg: 'This is foo' })
+    yield driver01.disconnect()
+
+    {
+      let driver02 = new JsonDriver(`${__dirname}/../tmp/testing-driver`)
+      yield driver02.connect()
+      let foo = yield driver02.read('/foo')
+      assert.deepEqual(foo, { msg: 'This is foo' })
+      yield driver02.delete('/foo')
+      yield driver02.disconnect()
+    }
   }))
 })
 

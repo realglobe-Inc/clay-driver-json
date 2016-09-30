@@ -1,3 +1,11 @@
 'use strict'
 
-const clayDriverJson = require('clay-driver-json')
+const { JsonDriver } = require('clay-driver-memory')
+
+{
+  const clayLump = require('clay-lump')
+  let lump01 = clayLump({
+    driver: new JsonDriver({})
+  })
+  /* ... */
+}

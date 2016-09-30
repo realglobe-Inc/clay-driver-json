@@ -40,7 +40,7 @@
       },
       "functions": [
         {
-          "name": "open",
+          "name": "connect",
           "access": "",
           "virtual": false,
           "description": "",
@@ -48,7 +48,7 @@
           "examples": []
         },
         {
-          "name": "close",
+          "name": "disconnect",
           "access": "",
           "virtual": false,
           "description": "",
