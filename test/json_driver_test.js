@@ -23,14 +23,14 @@ describe('json-driver', function () {
     let driver01 = new JsonDriver(`${__dirname}/../tmp/testing-driver`)
     assert.ok(driver01)
     yield driver01.connect()
-    yield driver01.create('/foo', { msg: 'This is foo' })
+    yield driver01.create('/foo/bar/baz', { msg: 'This is foo' })
     yield driver01.disconnect()
 
     {
       let driver02 = new JsonDriver(`${__dirname}/../tmp/testing-driver`)
       yield driver02.connect()
       let foo = yield driver02.read('/foo')
-      assert.deepEqual(foo, { msg: 'This is foo' })
+      assert.deepEqual(foo.bar.baz, { msg: 'This is foo' })
       yield driver02.delete('/foo')
       yield driver02.disconnect()
     }
