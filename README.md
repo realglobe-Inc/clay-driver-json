@@ -96,7 +96,7 @@ const { JSONDriver } = require('clay-driver-memory')
 API
 ---------
 
-# clay-driver-json@1.0.4
+# clay-driver-json@1.0.5
 
 Clay driver to save data into JSON files
 
@@ -274,6 +274,10 @@ This software is released under the [MIT License](https://github.com/realglobe-I
 Links
 ------
 
++ [ClayDB][clay_d_b_url]
++ [Realglobe, Inc.][realglobe,_inc__url]
 
+[clay_d_b_url]: https://github.com/realglobe-Inc/claydb
+[realglobe,_inc__url]: http://realglobe.jp
 
 <!-- Links End -->

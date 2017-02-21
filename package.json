@@ -6,51 +6,47 @@
   "browser": "ci/browser",
   "scripts": {
     "test": "node ./ci/test.js",
-    "prepublish": "node ./ci/build.js && node ./ci/shim.js && node ./ci/doc.js"
+    "prepare": "node ./ci/build.js && node ./ci/shim.js && node ./ci/doc.js"
   },
   "repository": "realglobe-Inc/clay-driver-json",
   "keywords": [
-    "claydb"
+    "ClayDB"
   ],
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishinishi@gmail.com",
     "url": "http://okunishitaka.com"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/realglobe-Inc/clay-driver-json/issues"
   },
   "homepage": "https://github.com/realglobe-Inc/clay-driver-json#readme",
   "dependencies": {
-    "abind": "^1.0.0",
-    "asfs": "^1.1.1",
-    "clay-constants": "^0.3.7",
-    "clay-driver-base": "0.0.5",
-    "clay-driver-memory": "^1.1.0",
+    "asfs": "^1.2.2",
+    "clay-driver-memory": "file:///Users/okunishitaka/Projects/realglobe-projects/clay-driver-memory",
     "co": "^4.6.0",
-    "json-pointer": "^0.5.0",
     "writeout": "^2.1.0"
   },
   "devDependencies": {
-    "ababel": "^1.1.10",
-    "ababel-es2015": "^1.0.8",
-    "amocha": "^1.0.15",
+    "ababel": "^2.0.1",
+    "ababel-es2015": "^2.0.1",
+    "amocha": "^2.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
-    "ape-reporting": "^3.0.2",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^5.0.19",
-    "ape-updating": "^4.0.5",
+    "ape-tmpl": "^5.0.20",
+    "ape-updating": "^4.1.0",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
-    "sg-templates": "^1.2.2",
-    "sg-travis": "^1.1.33",
-    "stringcase": "^3.1.1"
+    "request": "^2.79.0",
+    "sg-templates": "^1.2.5",
+    "stringcase": "^3.2.1",
+    "sugos-travis": "^2.0.7"
   },
   "engines": {
     "node": ">=6",
-    "npm": ">=3"
+    "npm": ">=4"
   },
   "publishConfig": {
     "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"

@@ -15,7 +15,7 @@ runTasks('build', [
   () => coz.render([
     '.*.bud',
     'doc/**/.*.bud',
-    'lib/.*.bud',
+    'lib/**/.*.bud',
     'test/.*.bud'
   ])
 ], true)
