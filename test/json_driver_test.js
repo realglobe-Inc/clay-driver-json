@@ -52,6 +52,9 @@ describe('json-driver', function () {
     assert.equal(destroyed, 1)
     let destroyed2 = yield driver.destroy('users', one.id)
     assert.equal(destroyed2, 0)
+
+    let destroyed3 = yield driver.destroy('users', created2.id)
+    assert.equal(destroyed3, 1)
   }))
 })
 
