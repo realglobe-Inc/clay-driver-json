@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-json",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Clay driver to save data into JSON files",
   "main": "lib",
   "browser": "ci/browser",
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/realglobe-Inc/clay-driver-json#readme",
   "dependencies": {
     "asfs": "^1.2.2",
-    "clay-driver-memory": "file:///Users/okunishitaka/Projects/realglobe-projects/clay-driver-memory",
+    "clay-driver-memory": "*",
     "co": "^4.6.0",
     "writeout": "^2.1.0"
   },
