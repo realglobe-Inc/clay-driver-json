@@ -53,8 +53,9 @@ describe('json-driver', function () {
     let destroyed2 = yield driver.destroy('users', one.id)
     assert.equal(destroyed2, 0)
 
-    let destroyed3 = yield driver.destroy('users', created2.id)
-    assert.equal(destroyed3, 1)
+    assert.equal((yield driver.list('users')).meta.total, 1)
+    yield driver.drop('users')
+    assert.equal((yield driver.list('users')).meta.total, 0)
   }))
 })
 
