@@ -13,9 +13,7 @@ module.exports = {
   tmpl: moduleIndex,
   data: {
     name: 'JsonDriver',
-    sub: {
-      'JSONDriver': './json_driver'
-    },
+    sub: {},
     pkg
   }
 }
