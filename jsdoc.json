@@ -73,16 +73,12 @@
           "examples": []
         },
         {
-          "name": "doFlush",
-          "access": "private",
+          "name": "drop",
+          "access": "",
           "virtual": false,
-          "description": "Flush to file if needed",
+          "description": "",
           "parameters": [],
-          "examples": [],
-          "returns": {
-            "type": "Promise",
-            "description": ""
-          }
+          "examples": []
         },
         {
           "name": "one",
@@ -419,7 +415,7 @@
       "fires": "",
       "constructor": {
         "name": "MemoryDriver",
-        "description": "Abstract driver",
+        "description": "Driver to store data on memory",
         "parameters": [],
         "examples": []
       },
@@ -458,6 +454,14 @@
         },
         {
           "name": "destroy",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        },
+        {
+          "name": "drop",
           "access": "",
           "virtual": false,
           "description": "",
