@@ -35,183 +35,37 @@
       "constructor": {
         "name": "JSONDriver",
         "description": "Abstract driver",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "dirname",
+            "type": "string",
+            "description": "Directory name to save data",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          },
+          {
+            "name": "options",
+            "type": "Object",
+            "description": "Optional settings",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          }
+        ],
         "examples": []
       },
       "functions": [
         {
-          "name": "connect",
+          "name": "getStorage",
           "access": "",
           "virtual": false,
-          "description": "Connect driver",
-          "parameters": [
-            {
-              "name": "config",
-              "type": "Object",
-              "description": "",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise",
-            "description": ""
-          }
+          "description": "",
+          "parameters": [],
+          "examples": []
         },
         {
-          "name": "disconnect",
-          "access": "",
-          "virtual": false,
-          "description": "Disconnect driver",
-          "parameters": [
-            {
-              "name": "config",
-              "type": "Object",
-              "description": "",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise",
-            "description": ""
-          }
-        },
-        {
-          "name": "create",
-          "access": "",
-          "virtual": false,
-          "description": "Create data with namepath",
-          "parameters": [
-            {
-              "name": "namepath",
-              "type": "string",
-              "description": "Namepath string",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "data",
-              "type": "Object",
-              "description": "Resource data to create",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise",
-            "description": ""
-          }
-        },
-        {
-          "name": "read",
-          "access": "",
-          "virtual": false,
-          "description": "Read data with namepath",
-          "parameters": [
-            {
-              "name": "namepath",
-              "type": "string",
-              "description": "Namepath string",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise",
-            "description": ""
-          }
-        },
-        {
-          "name": "update",
-          "access": "",
-          "virtual": false,
-          "description": "Update data with namepath",
-          "parameters": [
-            {
-              "name": "namepath",
-              "type": "string",
-              "description": "Namepath string",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "data",
-              "type": "Object",
-              "description": "Resource data to create",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise",
-            "description": ""
-          }
-        },
-        {
-          "name": "delete",
-          "access": "",
-          "virtual": false,
-          "description": "Delete data with namepath",
-          "parameters": [
-            {
-              "name": "namepath",
-              "type": "string",
-              "description": "Namepath string",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise",
-            "description": ""
-          }
-        },
-        {
-          "name": "cursor",
-          "access": "",
-          "virtual": false,
-          "description": "Get cursor to iterate",
-          "parameters": [
-            {
-              "name": "namepath",
-              "type": "string",
-              "description": "Namepath string",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "options",
-              "type": "Object",
-              "description": "Optional settings",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise.<Driver.Cursor>",
-            "description": ""
-          }
-        },
-        {
-          "name": "flushIfNeeded",
+          "name": "doFlush",
           "access": "",
           "virtual": false,
           "description": "Flush to file if needed",
@@ -219,39 +73,6 @@
           "examples": [],
           "returns": {
             "type": "Promise",
-            "description": ""
-          }
-        },
-        {
-          "name": "saveToJsonFile",
-          "access": "",
-          "virtual": false,
-          "description": "Save data to json file",
-          "parameters": [
-            {
-              "name": "data",
-              "type": "Object",
-              "description": "Data to save",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Promise",
-            "description": ""
-          }
-        },
-        {
-          "name": "readFromJsonFile",
-          "access": "",
-          "virtual": false,
-          "description": "Read data from json file",
-          "parameters": [],
-          "examples": [],
-          "returns": {
-            "type": "Promise.<Object>",
             "description": ""
           }
         }

@@ -24,7 +24,7 @@
   "homepage": "https://github.com/realglobe-Inc/clay-driver-json#readme",
   "dependencies": {
     "asfs": "^1.2.2",
-    "clay-driver-memory": "*",
+    "clay-driver-memory": "^2.0.1",
     "co": "^4.6.0",
     "writeout": "^2.1.0"
   },
