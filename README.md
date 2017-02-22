@@ -96,7 +96,7 @@ const { JSONDriver } = require('clay-driver-memory')
 API
 ---------
 
-# clay-driver-json@1.0.5
+# clay-driver-json@2.0.0
 
 Clay driver to save data into JSON files
 
@@ -263,7 +263,7 @@ Read data from json file
 
 License
 -------
-This software is released under the [MIT License](https://github.com/realglobe-Inc/clay-driver-json/blob/master/LICENSE).
+This software is released under the [Apache-2.0 License](https://github.com/realglobe-Inc/clay-driver-json/blob/master/LICENSE).
 
 <!-- LICENSE End -->
 
