@@ -10,7 +10,7 @@ const clayDriverTests = require('clay-driver-tests')
 const co = require('co')
 
 describe('json-driver', function () {
-  this.timeout(3000)
+  this.timeout(13000)
 
   before(() => co(function * () {
 
