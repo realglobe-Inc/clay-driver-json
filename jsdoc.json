@@ -125,9 +125,41 @@
             },
             {
               "name": "condition",
-              "type": "ListCondition",
+              "type": "Object",
               "description": "List condition query",
               "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.filter",
+              "type": "Object",
+              "description": "Filter condition",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page",
+              "type": "Object",
+              "description": "Page condition",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page.number",
+              "type": "Object",
+              "description": "Number of page, start with 1",
+              "default": 1,
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page.size",
+              "type": "Object",
+              "description": "Number of resources per page",
+              "default": 100,
               "optional": true,
               "nullable": ""
             }
@@ -294,9 +326,41 @@
             },
             {
               "name": "condition",
-              "type": "ListCondition",
+              "type": "Object",
               "description": "List condition query",
               "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.filter",
+              "type": "Object",
+              "description": "Filter condition",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page",
+              "type": "Object",
+              "description": "Page condition",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page.number",
+              "type": "Object",
+              "description": "Number of page, start with 1",
+              "default": 1,
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page.size",
+              "type": "Object",
+              "description": "Number of resources per page",
+              "default": 100,
               "optional": true,
               "nullable": ""
             }
@@ -469,6 +533,14 @@
           "examples": []
         },
         {
+          "name": "resources",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        },
+        {
           "name": "one",
           "access": "",
           "virtual": false,
@@ -513,9 +585,41 @@
             },
             {
               "name": "condition",
-              "type": "ListCondition",
+              "type": "Object",
               "description": "List condition query",
               "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.filter",
+              "type": "Object",
+              "description": "Filter condition",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page",
+              "type": "Object",
+              "description": "Page condition",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page.number",
+              "type": "Object",
+              "description": "Number of page, start with 1",
+              "default": 1,
+              "optional": true,
+              "nullable": ""
+            },
+            {
+              "name": "condition.page.size",
+              "type": "Object",
+              "description": "Number of resources per page",
+              "default": 100,
               "optional": true,
               "nullable": ""
             }

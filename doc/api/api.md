@@ -1,10 +1,10 @@
-# clay-driver-json@2.1.0
+# clay-driver-json@2.1.1
 
 Clay driver to save data into JSON files
 
 + Functions
   + [create(args)](#clay-driver-json-function-create)
-+ [`JSONDriver`](clay-driver-json-classes) Class
++ [`JSONDriver`](#clay-driver-json-classes) Class
   + [new JSONDriver(dirname, options)](#clay-driver-json-classes-j-s-o-n-driver-constructor)
   + [driver.getStorage()](#clay-driver-json-classes-j-s-o-n-driver-getStorage)
   + [driver.delStorage()](#clay-driver-json-classes-j-s-o-n-driver-delStorage)
@@ -92,7 +92,11 @@ List resource in namespace
 | Param | Type | Description |
 | ----- | --- | -------- |
 | namespace | string | Namespace to work with |
-| condition | ListCondition | List condition query |
+| condition | Object | List condition query |
+| condition.filter | Object | Filter condition |
+| condition.page | Object | Page condition |
+| condition.page.number | Object | Number of page, start with 1 |
+| condition.page.size | Object | Number of resources per page |
 
 
 <a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-create" ></a>
