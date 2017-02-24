@@ -96,17 +96,17 @@ const { JSONDriver } = require('clay-driver-memory')
 API
 ---------
 
-# clay-driver-json@2.0.1
+# clay-driver-json@2.1.1
 
 Clay driver to save data into JSON files
 
 + Functions
   + [create(args)](#clay-driver-json-function-create)
-+ [`JSONDriver`](clay-driver-json-classes) Class
++ [`JSONDriver`](#clay-driver-json-classes) Class
   + [new JSONDriver(dirname, options)](#clay-driver-json-classes-j-s-o-n-driver-constructor)
   + [driver.getStorage()](#clay-driver-json-classes-j-s-o-n-driver-getStorage)
   + [driver.delStorage()](#clay-driver-json-classes-j-s-o-n-driver-delStorage)
-  + [driver.doFlush()](#clay-driver-json-classes-j-s-o-n-driver-doFlush)
+  + [driver.drop()](#clay-driver-json-classes-j-s-o-n-driver-drop)
   + [driver.one(namespace, id)](#clay-driver-json-classes-j-s-o-n-driver-one)
   + [driver.list(namespace, condition)](#clay-driver-json-classes-j-s-o-n-driver-list)
   + [driver.create(namespace, attributes)](#clay-driver-json-classes-j-s-o-n-driver-create)
@@ -163,11 +163,11 @@ Constructor of JSONDriver class
 
 
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-doFlush" ></a>
+<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-drop" ></a>
 
-### driver.doFlush() -> `Promise`
+### driver.drop()
 
-Flush to file if needed
+
 
 <a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-one" ></a>
 

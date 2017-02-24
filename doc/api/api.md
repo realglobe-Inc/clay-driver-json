@@ -1,10 +1,10 @@
-# clay-driver-json@2.1.0
+# clay-driver-json@2.1.1
 
 Clay driver to save data into JSON files
 
 + Functions
   + [create(args)](#clay-driver-json-function-create)
-+ [`JSONDriver`](clay-driver-json-classes) Class
++ [`JSONDriver`](#clay-driver-json-classes) Class
   + [new JSONDriver(dirname, options)](#clay-driver-json-classes-j-s-o-n-driver-constructor)
   + [driver.getStorage()](#clay-driver-json-classes-j-s-o-n-driver-getStorage)
   + [driver.delStorage()](#clay-driver-json-classes-j-s-o-n-driver-delStorage)
