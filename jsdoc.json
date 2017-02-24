@@ -73,6 +73,14 @@
           "examples": []
         },
         {
+          "name": "storageKeys",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
+          "examples": []
+        },
+        {
           "name": "drop",
           "access": "",
           "virtual": false,

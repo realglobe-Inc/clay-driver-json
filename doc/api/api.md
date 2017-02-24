@@ -8,6 +8,7 @@ Clay driver to save data into JSON files
   + [new JSONDriver(dirname, options)](#clay-driver-json-classes-j-s-o-n-driver-constructor)
   + [driver.getStorage()](#clay-driver-json-classes-j-s-o-n-driver-getStorage)
   + [driver.delStorage()](#clay-driver-json-classes-j-s-o-n-driver-delStorage)
+  + [driver.storageKeys()](#clay-driver-json-classes-j-s-o-n-driver-storageKeys)
   + [driver.drop()](#clay-driver-json-classes-j-s-o-n-driver-drop)
   + [driver.one(namespace, id)](#clay-driver-json-classes-j-s-o-n-driver-one)
   + [driver.list(namespace, condition)](#clay-driver-json-classes-j-s-o-n-driver-list)
@@ -62,6 +63,12 @@ Constructor of JSONDriver class
 <a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-delStorage" ></a>
 
 ### driver.delStorage()
+
+
+
+<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-storageKeys" ></a>
+
+### driver.storageKeys()
 
 
 
