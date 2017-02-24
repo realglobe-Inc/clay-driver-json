@@ -60,6 +60,9 @@ describe('json-driver', function () {
     let destroyed2 = yield driver.destroy('users', one.id)
     equal(destroyed2, 0)
 
+    let resources = yield driver.resources()
+    deepEqual(resources, [ { name: 'users', version: 'latest' } ])
+
     equal((yield driver.list('users')).meta.total, 1)
     yield driver.flush()
     equal((yield driver.list('users')).meta.total, 1)
