@@ -49,7 +49,7 @@ describe('json-driver', function () {
     })
 
     deepEqual(list.meta, { offset: 0, limit: 100, length: 1, total: 1 })
-    yield driver.doFlush()
+    yield driver.flush()
     list = yield driver.list('users', {
       filter: { username: 'okunishinishi' }
     })
@@ -61,11 +61,11 @@ describe('json-driver', function () {
     equal(destroyed2, 0)
 
     equal((yield driver.list('users')).meta.total, 1)
-    yield driver.doFlush()
+    yield driver.flush()
     equal((yield driver.list('users')).meta.total, 1)
     yield driver.drop('users')
     equal((yield driver.list('users')).meta.total, 0)
-    yield driver.doFlush()
+    yield driver.flush()
     equal((yield driver.list('users')).meta.total, 0)
   }))
 
