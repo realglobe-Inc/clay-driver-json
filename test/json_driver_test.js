@@ -49,13 +49,11 @@ describe('json-driver', function () {
     })
 
     deepEqual(list.meta, { offset: 0, limit: 100, length: 1, total: 1 })
-    {
-      yield driver.doFlush()
-      list = yield driver.list('users', {
-        filter: { username: 'okunishinishi' }
-      })
-      deepEqual(list.meta, { offset: 0, limit: 100, length: 1, total: 1 })
-    }
+    yield driver.doFlush()
+    list = yield driver.list('users', {
+      filter: { username: 'okunishinishi' }
+    })
+    deepEqual(list.meta, { offset: 0, limit: 100, length: 1, total: 1 })
 
     let destroyed = yield driver.destroy('users', one.id)
     equal(destroyed, 1)
