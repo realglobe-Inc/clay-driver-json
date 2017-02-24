@@ -61,7 +61,7 @@ describe('json-driver', function () {
 
   it('Run clayDriverTests', () => co(function * () {
     let driver = new JsonDriver(`${__dirname}/../tmp/testing-driver-2`, {
-      flashInterval: 0
+      flashInterval: 100
     })
     yield clayDriverTests.run(driver)
   }))

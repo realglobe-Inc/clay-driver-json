@@ -92,11 +92,7 @@ List resource in namespace
 | Param | Type | Description |
 | ----- | --- | -------- |
 | namespace | string | Namespace to work with |
-| condition | Object | List condition query |
-| condition.filter | Object | Filter condition |
-| condition.page | Object | Page condition |
-| condition.page.number | Object | Number of page, start with 1 |
-| condition.page.size | Object | Number of resources per page |
+| condition | ListCondition | List condition query |
 
 
 <a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-create" ></a>
