@@ -83,7 +83,7 @@ describe('json-driver', function () {
   it('From lump', () => co(function * () {
     let lump = clayLump('Lump01', {
       driver: new JsonDriver(`${__dirname}/../tmp/testing-lump-driver`, {
-        flashInterval: 300
+        flashInterval: 0
       })
     })
     let Hoge = lump.resource('Hoge')
@@ -92,7 +92,7 @@ describe('json-driver', function () {
 
     let hoge01 = yield Hoge.create({ name: 'hoge01' })
     equal(hoge01.name, 'hoge01')
-    yield lump.driver.flush()
+    // yield lump.driver.flush()
     let hoge01AsOne = yield Hoge.one(hoge01.id)
     equal(hoge01AsOne.name, 'hoge01')
 
