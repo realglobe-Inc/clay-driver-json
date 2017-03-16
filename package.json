@@ -24,10 +24,10 @@
   "homepage": "https://github.com/realglobe-Inc/clay-driver-json#readme",
   "dependencies": {
     "aglob": "^2.0.1",
-    "asfs": "^1.2.2",
+    "asfs": "^1.2.3",
     "asleep": "^1.0.3",
-    "clay-driver-memory": "^2.1.3",
-    "clay-serial": "^1.1.1",
+    "clay-driver-memory": "^3.1.1",
+    "clay-serial": "^1.1.2",
     "co": "^4.6.0",
     "writeout": "^2.1.0"
   },
@@ -41,10 +41,11 @@
     "ape-tmpl": "^5.0.20",
     "ape-updating": "^4.1.0",
     "clay-driver-tests": "^1.1.2",
+    "clay-lump": "^3.0.3",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
-    "request": "^2.79.0",
-    "sg-templates": "^1.3.2",
+    "request": "^2.81.0",
+    "sg-templates": "^1.4.2",
     "stringcase": "^3.2.1",
     "sugos-travis": "^2.0.7"
   },
