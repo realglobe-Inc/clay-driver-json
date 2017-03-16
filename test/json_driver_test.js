@@ -25,52 +25,52 @@ describe('json-driver', function () {
     let driver = new JsonDriver(`${__dirname}/../tmp/testing-driver`, {
       flashInterval: 100
     })
-    let created = yield driver.create('users', {
+    let created = yield driver.create('User', {
       username: 'okunishinishi'
     })
-    let created2 = yield driver.create('users', {
+    let created2 = yield driver.create('User', {
       username: 'hoge'
     })
     ok(created2.id !== created.id)
     ok(created.id)
     equal(created.username, 'okunishinishi')
 
-    let one = yield driver.one('users', created.id)
+    let one = yield driver.one('User', created.id)
 
     equal(String(created.id), String(one.id))
 
-    let updated = yield driver.update('users', one.id, {
+    let updated = yield driver.update('User', one.id, {
       password: 'hogehoge'
     })
     equal(String(updated.id), String(one.id))
     equal(updated.password, 'hogehoge')
 
-    let list = yield driver.list('users', {
+    let list = yield driver.list('User', {
       filter: { username: 'okunishinishi' }
     })
 
     deepEqual(list.meta, { offset: 0, limit: 100, length: 1, total: 1 })
     yield driver.flush()
-    list = yield driver.list('users', {
+    list = yield driver.list('User', {
       filter: { username: 'okunishinishi' }
     })
     deepEqual(list.meta, { offset: 0, limit: 100, length: 1, total: 1 })
 
-    let destroyed = yield driver.destroy('users', one.id)
+    let destroyed = yield driver.destroy('User', one.id)
     equal(destroyed, 1)
-    let destroyed2 = yield driver.destroy('users', one.id)
+    let destroyed2 = yield driver.destroy('User', one.id)
     equal(destroyed2, 0)
 
     let resources = yield driver.resources()
-    deepEqual(resources, [ { name: 'users', version: 'latest' } ])
+    equal(resources[ 0 ].name, 'User')
 
-    equal((yield driver.list('users')).meta.total, 1)
+    equal((yield driver.list('User')).meta.total, 1)
     yield driver.flush()
-    equal((yield driver.list('users')).meta.total, 1)
-    yield driver.drop('users')
-    equal((yield driver.list('users')).meta.total, 0)
+    equal((yield driver.list('User')).meta.total, 1)
+    yield driver.drop('User')
+    equal((yield driver.list('User')).meta.total, 0)
     yield driver.flush()
-    equal((yield driver.list('users')).meta.total, 0)
+    equal((yield driver.list('User')).meta.total, 0)
   }))
 
   it('Run clayDriverTests', () => co(function * () {
