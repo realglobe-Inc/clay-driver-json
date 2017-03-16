@@ -7,11 +7,12 @@
 const JsonDriver = require('../lib/json_driver.js')
 const { ok, equal, deepEqual } = require('assert')
 const clayLump = require('clay-lump')
+const rimraf = require('rimraf')
 const clayDriverTests = require('clay-driver-tests')
 const co = require('co')
 
 describe('json-driver', function () {
-  this.timeout(13000)
+  this.timeout(30000)
 
   before(() => co(function * () {
 
@@ -74,7 +75,9 @@ describe('json-driver', function () {
   }))
 
   it('Run clayDriverTests', () => co(function * () {
-    let driver = new JsonDriver(`${__dirname}/../tmp/testing-driver-2`, {
+    let dirname = `${__dirname}/../tmp/testing-driver-2`
+    rimraf.sync(dirname)
+    let driver = new JsonDriver(dirname, {
       flashInterval: 100
     })
     yield clayDriverTests.run(driver)
@@ -82,6 +85,7 @@ describe('json-driver', function () {
 
   it('From lump', () => co(function * () {
     let dirname = `${__dirname}/../tmp/testing-lump-driver`
+    rimraf.sync(dirname)
     let lump = clayLump('Lump01', {
       driver: new JsonDriver(dirname, {
         flashInterval: 1
@@ -93,7 +97,7 @@ describe('json-driver', function () {
 
     let hoge01 = yield Hoge.create({ name: 'hoge01' })
     equal(hoge01.name, 'hoge01')
-    // yield lump.driver.flush()
+    yield lump.driver.flush()
     let hoge01AsOne = yield Hoge.one(hoge01.id)
     equal(hoge01AsOne.name, 'hoge01')
 

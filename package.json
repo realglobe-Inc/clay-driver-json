@@ -45,6 +45,7 @@
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
     "request": "^2.81.0",
+    "rimraf": "^2.6.1",
     "sg-templates": "^1.4.2",
     "stringcase": "^3.2.1",
     "sugos-travis": "^2.0.7"
