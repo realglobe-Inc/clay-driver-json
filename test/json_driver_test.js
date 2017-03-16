@@ -81,9 +81,10 @@ describe('json-driver', function () {
   }))
 
   it('From lump', () => co(function * () {
+    let dirname = `${__dirname}/../tmp/testing-lump-driver`
     let lump = clayLump('Lump01', {
-      driver: new JsonDriver(`${__dirname}/../tmp/testing-lump-driver`, {
-        flashInterval: 0
+      driver: new JsonDriver(dirname, {
+        flashInterval: 1
       })
     })
     let Hoge = lump.resource('Hoge')
