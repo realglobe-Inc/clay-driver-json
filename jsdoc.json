@@ -48,8 +48,16 @@
             "name": "options",
             "type": "Object",
             "description": "Optional settings",
-            "default": "",
-            "optional": "",
+            "default": "{}",
+            "optional": true,
+            "nullable": ""
+          },
+          {
+            "name": "options.flashInterval",
+            "type": "number",
+            "description": "Interval of auto flush",
+            "default": 300,
+            "optional": true,
             "nullable": ""
           }
         ],
@@ -57,47 +65,27 @@
       },
       "functions": [
         {
-          "name": "getStorage",
+          "name": "flush",
           "access": "",
           "virtual": false,
-          "description": "",
+          "description": "Flush data into json files",
           "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "delStorage",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "storageKeys",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "drop",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
+          "examples": [],
+          "returns": {
+            "type": "Promise",
+            "description": ""
+          }
         },
         {
           "name": "one",
           "access": "",
           "virtual": false,
-          "description": "Get single resource from namespace",
+          "description": "Get single entity from resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namespace to work with",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -121,12 +109,12 @@
           "name": "list",
           "access": "",
           "virtual": false,
-          "description": "List resource in namespace",
+          "description": "List entities from resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namespace to work with",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -150,12 +138,12 @@
           "name": "create",
           "access": "",
           "virtual": false,
-          "description": "Create data with namespace",
+          "description": "Create a new entity with resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namepath string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -179,12 +167,12 @@
           "name": "update",
           "access": "",
           "virtual": false,
-          "description": "Update data with namespace",
+          "description": "Update an existing entity in resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namepath string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -216,12 +204,12 @@
           "name": "destroy",
           "access": "",
           "virtual": false,
-          "description": "Delete data with namespace",
+          "description": "Delete a entity resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namepath string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -239,6 +227,39 @@
           "returns": {
             "type": "Promise.<number>",
             "description": "Destroyed count (0 or 1)"
+          }
+        },
+        {
+          "name": "drop",
+          "access": "",
+          "virtual": false,
+          "description": "Drop resource",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Promise.<boolean>",
+            "description": "False if there were nothing to drop"
+          }
+        },
+        {
+          "name": "resources",
+          "access": "",
+          "virtual": false,
+          "description": "List resources",
+          "parameters": [],
+          "examples": [],
+          "returns": {
+            "type": "Promise.<Resource>",
+            "description": "Resources"
           }
         }
       ]
@@ -261,12 +282,12 @@
           "name": "one",
           "access": "",
           "virtual": false,
-          "description": "Get single resource from namespace",
+          "description": "Get single entity from resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namespace to work with",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -290,12 +311,12 @@
           "name": "list",
           "access": "",
           "virtual": false,
-          "description": "List resource in namespace",
+          "description": "List entities from resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namespace to work with",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -319,12 +340,12 @@
           "name": "create",
           "access": "",
           "virtual": false,
-          "description": "Create data with namespace",
+          "description": "Create a new entity with resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namepath string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -348,12 +369,12 @@
           "name": "update",
           "access": "",
           "virtual": false,
-          "description": "Update data with namespace",
+          "description": "Update an existing entity in resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namepath string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -385,12 +406,12 @@
           "name": "destroy",
           "access": "",
           "virtual": false,
-          "description": "Delete data with namespace",
+          "description": "Delete a entity resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namepath string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -408,6 +429,39 @@
           "returns": {
             "type": "Promise.<number>",
             "description": "Destroyed count (0 or 1)"
+          }
+        },
+        {
+          "name": "drop",
+          "access": "",
+          "virtual": false,
+          "description": "Drop resource",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Promise.<boolean>",
+            "description": "False if there were nothing to drop"
+          }
+        },
+        {
+          "name": "resources",
+          "access": "",
+          "virtual": false,
+          "description": "List resources",
+          "parameters": [],
+          "examples": [],
+          "returns": {
+            "type": "Promise.<Resource>",
+            "description": "Resources"
           }
         }
       ]
@@ -432,68 +486,12 @@
           "name": "one",
           "access": "",
           "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "list",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "create",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "update",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "destroy",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "drop",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "resources",
-          "access": "",
-          "virtual": false,
-          "description": "",
-          "parameters": [],
-          "examples": []
-        },
-        {
-          "name": "one",
-          "access": "",
-          "virtual": false,
-          "description": "Get single resource from namespace",
+          "description": "Get single entity from resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namespace to work with",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -517,12 +515,12 @@
           "name": "list",
           "access": "",
           "virtual": false,
-          "description": "List resource in namespace",
+          "description": "List entities from resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namespace to work with",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -546,12 +544,12 @@
           "name": "create",
           "access": "",
           "virtual": false,
-          "description": "Create data with namespace",
+          "description": "Create a new entity with resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namepath string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -575,12 +573,12 @@
           "name": "update",
           "access": "",
           "virtual": false,
-          "description": "Update data with namespace",
+          "description": "Update an existing entity in resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namepath string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -612,12 +610,12 @@
           "name": "destroy",
           "access": "",
           "virtual": false,
-          "description": "Delete data with namespace",
+          "description": "Delete a entity resource",
           "parameters": [
             {
-              "name": "namespace",
+              "name": "resourceName",
               "type": "string",
-              "description": "Namepath string",
+              "description": "Name of resource",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -635,6 +633,39 @@
           "returns": {
             "type": "Promise.<number>",
             "description": "Destroyed count (0 or 1)"
+          }
+        },
+        {
+          "name": "drop",
+          "access": "",
+          "virtual": false,
+          "description": "Drop resource",
+          "parameters": [
+            {
+              "name": "resourceName",
+              "type": "string",
+              "description": "Name of resource",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Promise.<boolean>",
+            "description": "False if there were nothing to drop"
+          }
+        },
+        {
+          "name": "resources",
+          "access": "",
+          "virtual": false,
+          "description": "List resources",
+          "parameters": [],
+          "examples": [],
+          "returns": {
+            "type": "Promise.<Resource>",
+            "description": "Resources"
           }
         }
       ]

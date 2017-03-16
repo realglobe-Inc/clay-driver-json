@@ -6,6 +6,7 @@
 
 const JsonDriver = require('../lib/json_driver.js')
 const { ok, equal, deepEqual } = require('assert')
+const clayLump = require('clay-lump')
 const clayDriverTests = require('clay-driver-tests')
 const co = require('co')
 
@@ -77,6 +78,25 @@ describe('json-driver', function () {
       flashInterval: 100
     })
     yield clayDriverTests.run(driver)
+  }))
+
+  it('From lump', () => co(function * () {
+    let lump = clayLump('Lump01', {
+      driver: new JsonDriver(`${__dirname}/../tmp/testing-lump-driver`, {
+        flashInterval: 0
+      })
+    })
+    let Hoge = lump.resource('Hoge')
+
+    let count = yield Hoge.count()
+
+    let hoge01 = yield Hoge.create({ name: 'hoge01' })
+    equal(hoge01.name, 'hoge01')
+    // yield lump.driver.flush()
+    let hoge01AsOne = yield Hoge.one(hoge01.id)
+    equal(hoge01AsOne.name, 'hoge01')
+
+    equal(yield Hoge.count(), count + 1)
   }))
 })
 
