@@ -1,19 +1,19 @@
-# clay-driver-json@2.1.3
+# clay-driver-json@2.1.4
 
 Clay driver to save data into JSON files
 
 + Functions
   + [create(args)](#clay-driver-json-function-create)
-+ [`JSONDriver`](#clay-driver-json-classes) Class
-  + [new JSONDriver(dirname, options)](#clay-driver-json-classes-j-s-o-n-driver-constructor)
-  + [driver.flush()](#clay-driver-json-classes-j-s-o-n-driver-flush)
-  + [driver.one(resourceName, id)](#clay-driver-json-classes-j-s-o-n-driver-one)
-  + [driver.list(resourceName, condition)](#clay-driver-json-classes-j-s-o-n-driver-list)
-  + [driver.create(resourceName, attributes)](#clay-driver-json-classes-j-s-o-n-driver-create)
-  + [driver.update(resourceName, id, attributes)](#clay-driver-json-classes-j-s-o-n-driver-update)
-  + [driver.destroy(resourceName, id)](#clay-driver-json-classes-j-s-o-n-driver-destroy)
-  + [driver.drop(resourceName)](#clay-driver-json-classes-j-s-o-n-driver-drop)
-  + [driver.resources()](#clay-driver-json-classes-j-s-o-n-driver-resources)
++ [`JSONDriver`](#clay-driver-json-class) Class
+  + [new JSONDriver(dirname, options)](#clay-driver-json-class-j-s-o-n-driver-constructor)
+  + [driver.flush()](#clay-driver-json-class-j-s-o-n-driver-flush)
+  + [driver.one(resourceName, id)](#clay-driver-json-class-j-s-o-n-driver-one)
+  + [driver.list(resourceName, condition)](#clay-driver-json-class-j-s-o-n-driver-list)
+  + [driver.create(resourceName, attributes)](#clay-driver-json-class-j-s-o-n-driver-create)
+  + [driver.update(resourceName, id, attributes)](#clay-driver-json-class-j-s-o-n-driver-update)
+  + [driver.destroy(resourceName, id)](#clay-driver-json-class-j-s-o-n-driver-destroy)
+  + [driver.drop(resourceName)](#clay-driver-json-class-j-s-o-n-driver-drop)
+  + [driver.resources()](#clay-driver-json-class-j-s-o-n-driver-resources)
 
 ## Functions
 
@@ -29,7 +29,7 @@ Create driver instance
 
 
 
-<a class='md-heading-link' name="clay-driver-json-classes"></a>
+<a class='md-heading-link' name="clay-driver-json-class"></a>
 
 ## `JSONDriver` Class
 
@@ -41,7 +41,7 @@ Driver to store data into json files
 
 
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-constructor" ></a>
+<a class='md-heading-link' name="clay-driver-json-class-j-s-o-n-driver-constructor" ></a>
 
 ### new JSONDriver(dirname, options)
 
@@ -54,13 +54,13 @@ Constructor of JSONDriver class
 | options.flashInterval | number | Interval of auto flush |
 
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-flush" ></a>
+<a class='md-heading-link' name="clay-driver-json-class-j-s-o-n-driver-flush" ></a>
 
 ### driver.flush() -> `Promise`
 
 Flush data into json files
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-one" ></a>
+<a class='md-heading-link' name="clay-driver-json-class-j-s-o-n-driver-one" ></a>
 
 ### driver.one(resourceName, id) -> `Promise.<ClayEntity>`
 
@@ -72,7 +72,7 @@ Get single entity from resource
 | id | ClayId | Resource id |
 
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-list" ></a>
+<a class='md-heading-link' name="clay-driver-json-class-j-s-o-n-driver-list" ></a>
 
 ### driver.list(resourceName, condition) -> `Promise.<ClayCollection>`
 
@@ -84,7 +84,7 @@ List entities from resource
 | condition | ListCondition | List condition query |
 
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-create" ></a>
+<a class='md-heading-link' name="clay-driver-json-class-j-s-o-n-driver-create" ></a>
 
 ### driver.create(resourceName, attributes) -> `Promise.<ClayEntity>`
 
@@ -96,7 +96,7 @@ Create a new entity with resource
 | attributes | Object | Resource attributes to create |
 
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-update" ></a>
+<a class='md-heading-link' name="clay-driver-json-class-j-s-o-n-driver-update" ></a>
 
 ### driver.update(resourceName, id, attributes) -> `Promise.<ClayEntity>`
 
@@ -109,7 +109,7 @@ Update an existing entity in resource
 | attributes | Object | Resource attributes to update |
 
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-destroy" ></a>
+<a class='md-heading-link' name="clay-driver-json-class-j-s-o-n-driver-destroy" ></a>
 
 ### driver.destroy(resourceName, id) -> `Promise.<number>`
 
@@ -121,7 +121,7 @@ Delete a entity resource
 | id | ClayId | Resource id |
 
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-drop" ></a>
+<a class='md-heading-link' name="clay-driver-json-class-j-s-o-n-driver-drop" ></a>
 
 ### driver.drop(resourceName) -> `Promise.<boolean>`
 
@@ -132,7 +132,7 @@ Drop resource
 | resourceName | string | Name of resource |
 
 
-<a class='md-heading-link' name="clay-driver-json-classes-j-s-o-n-driver-resources" ></a>
+<a class='md-heading-link' name="clay-driver-json-class-j-s-o-n-driver-resources" ></a>
 
 ### driver.resources() -> `Promise.<Resource>`
 

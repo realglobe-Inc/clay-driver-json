@@ -2,13 +2,9 @@ language: node_js
 node_js:
 - '7'
 before_install:
-# TODO OSS
-# - npm i npm-cli-login -g
-# - npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
-# - npm who
-- echo "registry = https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-virtual" > $HOME/.npmrc
-- curl -u${NPM_USER}:${NPM_PASSWORD} "https://realglobe.artifactoryonline.com/realglobe/api/npm/auth" >> $HOME/.npmrc
-- cat $HOME/.npmrc
+- npm i npm-cli-login -g
+- npm-cli-login -u "${NPM_USER}" -p "${NPM_PASSWORD}" -e "${NPM_EMAIL}"
+- npm who
 install:
 - npm install jsdoc -g
 - npm install
@@ -20,4 +16,4 @@ script:
 after_success:
 - ./ci/travis/publish.js
 env:
-  secure: "Bpjf+BrlJtjRQKFg+akDfXWI++xqz4yGHeWKPSfIU5dWKn+Ul12fv6FFlcWeIsdRokcGG3ng5+OqJ2zyCQiN22kFOsAxp6fZH/CfCDjElGIgkBSfMnOKosvxxu/Kb5y57rtrBvKqrox7sZyigEBmpszXPFFP9iUQgWpcDNUWxz5vJyMRLoTTX0UExe5xYpUitwwY+EyYzGcXKYMzWLfjHVkJZMziODstDe6Ji0seXMlPLPn4LD2M56DzAR3feJfHvLaMg3k/gHRWv+4K1i/Wfd0nYWWhqxfPz+Or5KYUlxAdY1OmpHVMHavrJVzqYIGe5cae7B2YtKVqaAYqVBC3xSjUkvQp2ofjUmOsz0R3VZ4fE+u/3DVJWohfdpf6+PVLa9nfu7xrFeOa9Z00zdtPHV7F95ZKmd9deRmeoyx0CMglvUoM7DJLWcsnKOsZxLRnSzRw54gtgfzSg8dxsG7/PeZLh+oCRNkRQ1+wyg/k8KolwWuP7pZ0MUVGoxIRgKhInYWYJnfe7lRyS/sQjOKHtCxlLvEI9KjS0n9L5WyRXijRR3hq2ZMKlUfFnZzjgenDPZ7mXx52n2DbbvN9cMQhrNxq7Ng8xIDZFf5+MwmTyLoJnMtgngwdc0QFpfsevFsskEIusAy8g/GwRqnBiyy/HY1KhhKV+rFhoOld9qqaHTg="
+  secure: "Mgr3jvmpkuR3ru1S8Y0E1kIlN7fJFPYxy0CZevru0jZlcYR7OE92BKGYmOjExiWMTLNeI9PAG6uhab22oo6glC228MOyFYJmKWFg6hLjOfH9slXHH0TQZ4oyqdqZyEODy3kJHgtye6Uv2K3TtQEQ91Gij5M9UeKkD3in2SJiIfiCOlfsj2nDv1H/Y/9HvgmIV7EUeJ4cDVvCybUiW5fwCt+9ppHtJtziDJ65VopgUoTUXne3lm0TL98veapU41yBquOPPXorHzzCA7QJaIpOdRKPb2Pkte1SmXdMHwT/MM1jZDtjhdSSk04XLFLSW0gS7GZ4bPPWBYusMOtzASlDkakFYsgkDFxBpDGHqyJGrZ5lYR9RdoDqqwgDJDU+cfZPj01yCoMkA4EgbYGtrSUgqARmwxFBNMyL7wVCLljFWIKzIY5fznyn68ARukMnjA9xnJxYdXqc38ZHrOTJiNf/z21QwhZpku4x6qLlCPqjnsKBNKGvDk8lR1o0s81U4UXLHuiXGHFUFUlmyJTMEaVgV1oZAQEElB3pG4KBjO5k6WI7pQY50rgh9rscxbgbTEH/wCleYpLFw7cCR5zoNKYR+Z2MftuIdTtDKVBtNQtCBwN16bxfY1pYL6hUN3NL06BoFslRGlv1PAAiO1fWZOAOiqogCx9uDDIK+qImq1feSWA="
