@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-json",
-  "version": "2.1.4",
+  "version": "3.0.1",
   "description": "Clay driver to save data into JSON files",
   "main": "lib",
   "browser": "ci/browser",
@@ -26,8 +26,8 @@
     "aglob": "^2.0.1",
     "asfs": "^1.2.3",
     "asleep": "^1.0.3",
-    "clay-driver-memory": "^4.0.2",
-    "clay-serial": "^2.0.2",
+    "clay-driver-memory": "^4.0.1",
+    "clay-serial": "^2.0.1",
     "co": "^4.6.0",
     "writeout": "^2.2.0"
   },
@@ -39,9 +39,9 @@
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^5.0.20",
-    "ape-updating": "^4.1.1",
+    "ape-updating": "^4.1.0",
     "clay-driver-tests": "^2.0.1",
-    "clay-lump": "^4.2.1",
+    "clay-lump": "^4.0.1",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
     "request": "^2.81.0",
@@ -53,8 +53,5 @@
   "engines": {
     "node": ">=6",
     "npm": ">=4"
-  },
-  "publishConfig": {
-    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
   }
 }
