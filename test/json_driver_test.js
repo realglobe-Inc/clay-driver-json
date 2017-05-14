@@ -86,10 +86,11 @@ describe('json-driver', function () {
   it('From lump', () => co(function * () {
     let dirname = `${__dirname}/../tmp/testing-lump-driver`
     rimraf.sync(dirname)
+    let driver = new JsonDriver(dirname, {
+      flashInterval: 1
+    })
     let lump = clayLump('Lump01', {
-      driver: new JsonDriver(dirname, {
-        flashInterval: 1
-      })
+      driver
     })
     let Hoge = lump.resource('Hoge')
 
@@ -102,6 +103,8 @@ describe('json-driver', function () {
     equal(hoge01AsOne.name, 'hoge01')
 
     equal(yield Hoge.count(), count + 1)
+
+    yield driver.close()
   }))
 })
 
