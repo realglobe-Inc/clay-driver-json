@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-json",
-  "version": "3.0.3",
+  "version": "4.0.0",
   "description": "Clay driver to save data into JSON files",
   "main": "lib",
   "browser": "ci/browser",
@@ -28,7 +28,6 @@
     "asleep": "^1.0.3",
     "clay-driver-memory": "^4.1.1",
     "clay-serial": "^2.0.1",
-    "co": "^4.6.0",
     "writeout": "^2.2.0"
   },
   "devDependencies": {
@@ -51,7 +50,7 @@
     "sugos-travis": "^2.0.7"
   },
   "engines": {
-    "node": ">=6",
+    "node": ">=8",
     "npm": ">=4"
   }
 }
