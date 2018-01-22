@@ -26,18 +26,17 @@
     "aglob": "^3.0.0",
     "asfs": "^2.0.1",
     "asleep": "^1.0.3",
-    "clay-driver-memory": "^4.1.7",
+    "clay-driver-memory": "^4.1.8",
     "clay-serial": "^2.0.1",
     "writeout": "^2.2.0"
   },
   "devDependencies": {
-    "ababel": "^2.0.3",
-    "ababel-es2015": "^2.0.1",
+    "ababel": "^4.0.6",
     "amocha": "^4.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^6.0.2",
+    "ape-tmpl": "^6.0.8",
     "ape-updating": "^4.1.0",
     "clay-driver-tests": "^2.0.1",
     "clay-lump": "^4.2.29",
@@ -46,7 +45,7 @@
     "request": "^2.81.0",
     "rimraf": "^2.6.1",
     "sg-templates": "^1.4.4",
-    "stringcase": "^4.0.0",
+    "stringcase": "^4.1.0",
     "sugos-travis": "^2.0.7"
   },
   "engines": {
