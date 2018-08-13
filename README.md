@@ -96,7 +96,7 @@ const { JSONDriver } = require('clay-driver-memory')
 API
 ---------
 
-# clay-driver-json@4.0.8
+# clay-driver-json@4.0.9
 
 Clay driver to save data into JSON files
 
