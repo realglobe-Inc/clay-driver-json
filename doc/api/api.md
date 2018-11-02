@@ -1,4 +1,4 @@
-# clay-driver-json@4.0.10
+# clay-driver-json@4.0.11
 
 Clay driver to save data into JSON files
 
