@@ -26,7 +26,7 @@
     "aglob": "^3.0.1",
     "asfs": "^2.2.1",
     "asleep": "^1.0.3",
-    "clay-driver-memory": "^4.1.17",
+    "clay-driver-memory": "^4.1.18",
     "clay-serial": "^2.1.4",
     "writeout": "^2.2.3"
   },
