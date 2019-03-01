@@ -1,6 +1,6 @@
 {
   "name": "clay-driver-json",
-  "version": "4.0.14",
+  "version": "4.0.15",
   "description": "Clay driver to save data into JSON files",
   "main": "lib",
   "browser": "ci/browser",
